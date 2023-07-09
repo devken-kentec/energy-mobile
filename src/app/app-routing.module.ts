@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'frequencia',
+    loadChildren: () => import('./pages/frequencia/frequencia.module').then( m => m.FrequenciaPageModule)
+  },
+  {
+    path: 'consulta-frequencia',
+    loadChildren: () => import('./pages/consulta-frequencia/consulta-frequencia.module').then( m => m.ConsultaFrequenciaPageModule)
+  },
 ];
 
 @NgModule({
